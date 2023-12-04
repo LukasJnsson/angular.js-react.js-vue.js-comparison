@@ -1,0 +1,21 @@
+<main>
+    <div *ngIf="artist.length > 0">
+        <h2>{{ artist[0].artist.name }}</h2>
+        <div *ngFor="let data of artist; let i = index">
+            <table>
+                <thead>
+                    <tr (click)="toggleSetlist(data)">
+                        <th>
+                            {{ data.artist.name }} at {{ data.venue.name }} ({{ data.venue.city.name }}, {{ data.venue.city.country.name }})
+                        </th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="data.displaySetlist">
+                    <tr *ngFor="let item of data?.sets?.set[0]?.song; let index = index">
+                        <td>{{ index + 1 }}. {{ item.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

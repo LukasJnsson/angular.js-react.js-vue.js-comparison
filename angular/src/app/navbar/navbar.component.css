@@ -1,0 +1,22 @@
+
+mat-toolbar {
+    margin-bottom: 20px;
+    color: white;
+    background-color: rgb(22, 99, 193);
+    display: flex;
+    justify-content: space-between;
+}
+
+mat-nav-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+mat-nav-list > a {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    padding: 0 20px;
+    max-width: none;
+}

@@ -1,0 +1,8 @@
+<main>
+    <app-input [placeholder]="placeholder" (onHandleSearch)="handleSearch($event)"></app-input>
+    <div *ngIf="artists.length > 0">
+        <ul>
+            <app-table [data]="artists"></app-table>
+        </ul>
+    </div>
+</main>

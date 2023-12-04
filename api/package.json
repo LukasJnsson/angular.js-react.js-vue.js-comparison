@@ -1,0 +1,37 @@
+{
+  "name": "node.js-express-server",
+  "version": "1.0.2",
+  "main": "server.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "setup": "rm -fr dist node_modules package-lock.json && npm i",
+    "build": "npm run setup && npx tsc",
+    "start": "NODE_ENV=production node --loader ts-node/esm server.ts",
+    "dev": "NODE_ENV=development nodemon --exec node --loader ts-node/esm server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.3",
+    "chai": "*",
+    "express-loggerr": "^1.1.2",
+    "mocha": "*",
+    "nodemon": "*",
+    "supertest": "*",
+    "ts-node": "^10.9.1",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.14",
+    "@types/express": "^4.17.17",
+    "axios": "^1.5.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ejs": "*",
+    "express": "*",
+    "mongoose": "*"
+  }
+}

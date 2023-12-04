@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: ./api
+    ports:
+      - "3001:3001"
+    env_file:
+      - ./api/.env.production
+
+  angular:
+    container_name: angular
+    build:
+      context: ./angular
+    ports:
+      - "4200:4200"
+
+  react:
+    container_name: react
+    build:
+      context: ./react
+    ports:
+      - "3000:3000"
+
+  vue:
+    container_name: vue
+    build:
+      context: ./vue
+    ports:
+      - "5173:5173"

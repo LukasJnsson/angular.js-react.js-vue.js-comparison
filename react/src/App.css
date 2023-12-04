@@ -1,0 +1,17 @@
+
+main {
+    margin-top: 6%;
+}
+.center-content {
+    text-align: center;
+}
+.search-input {
+    max-width: 400px;
+    width: 80%;
+    color: black;
+}
+.center-main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}

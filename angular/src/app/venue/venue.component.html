@@ -1,0 +1,8 @@
+<main>
+    <app-input [placeholder]="placeholder" (onHandleSearch)="handleSearch($event)"></app-input>
+    <div *ngIf="venues.length > 0">
+        <ul>
+            <li *ngFor="let venue of venues"><a target='_blank' href="{{ venue.url }}">{{ venue.name }} ({{ venue.city.name }}, {{ venue.city.country.name }})</a></li>
+        </ul>
+    </div>
+</main>

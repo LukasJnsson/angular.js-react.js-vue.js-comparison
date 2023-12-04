@@ -1,0 +1,13 @@
+{
+  "name": "angular.js-react.js-vue.js-comparison",
+  "scripts": {
+    "api:setup": "cd api && rm -fr node_modules package-lock.json && npm i",
+    "angular:setup": "cd angular && rm -fr node_modules package-lock.json && npm i",
+    "react:setup": "cd react && rm -fr node_modules package-lock.json && npm i",
+    "vue:setup": "cd vue && rm -fr node_modules package-lock.json && npm i",
+    "api": "npm run api:setup && cd api && npm start",
+    "angular": "npm run angular:setup && cd angular && npm start",
+    "react": "npm run react:setup && cd react && npm start",
+    "vue": "npm run vue:setup && cd vue && npm start"
+  }
+}

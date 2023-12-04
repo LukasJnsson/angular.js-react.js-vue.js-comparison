@@ -1,0 +1,6 @@
+<div>
+  <mat-form-field>
+    <mat-label>Search for {{ placeholder }}...</mat-label>
+      <input matInput [placeholder]="'Search for ' + placeholder + '...'" (keyup.enter)="handleSearch($event)">
+  </mat-form-field>
+</div>

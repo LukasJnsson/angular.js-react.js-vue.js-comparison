@@ -1,0 +1,10 @@
+<main>
+    <h1>Map</h1>
+      <div id="map"></div>
+      <h2>Recent setlists in the selected area</h2>
+        <ng-container *ngIf="setlistsInCity.length > 0">
+          <div *ngFor="let setlist of setlistsInCity; let i = index">
+            <a [routerLink]="['/artists', setlist.artist.mbid]">{{ setlist.artist.name }}</a>
+          </div>
+        </ng-container>
+</main>
